@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/Icon-Logo-Transparent-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Eclipse Tournaments</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="bg-azul">
+        <header
+            class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="imglogoeclipse" src="img/Text-Logo-Transparent-1.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 text-blanco">Inicio</a></li>
+                <li><a href="conocenos.html" class="nav-link px-2 text-blanco">Conócenos</a></li>
+                <button class="btn dropdown-toggle text-blanco nav-item dropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">Liga</button>
+                <ul class="dropdown-menu bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="division1-info.html">Primera División</a></li>
+                    <li><a class="dropdown-item text-blanco" href="division2-info.html">Segunda División</a></li>
+                </ul>
+                <li><a href="patrocinadores.html" class="nav-link px-2 text-blanco">Patrocinadores</a></li>
+                <li><a href="soporte.html" class="nav-link px-2 text-blanco">Soporte</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end" id="navbarLogin">
+                <a type="button" class="btn btn-oro-outline me-2" href="iniciar-sesion.html">Iniciar Sesión</a>
+                <a type="button" class="btn btn-oro" href="registro.html">Registrarse</a>
+            </div>
+
+            <div class="dropdown text-end" id="navbarLoggedIn" style="display: none;">
+                <a href="#" class="d-block text-decoration-none dropdown-toggle text-blanco" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img alt="ImgPerfil" width="32" height="32" class="rounded-circle" id="agentePerfil">
+                </a>
+                <ul class="dropdown-menu text-small bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="perfilUsuario.html">Perfil</a></li>
+                    <li><a class="dropdown-item text-blanco" href="perfilEquipo.html">Equipo</a></li>
+                    <li><a class="dropdown-item text-blanco" href="config-perfil.html">Configuración</a></li>
+                    <li>
+                        <hr class="dropdown-divider" style="border-color: white;">
+                    </li>
+                    <li><a class="dropdown-item text-blanco" onclick="cerrarSesion();">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- DATOS A EDITAR -->
+    <div class="jumbotron-politica p-5">
+        <div class="container bg-azul rounded-3 p-5 my-5" style="max-width: 750px;">
+            <!-- Titulo -->
+            <div class="text-center border-bottom position-relative">
+                <h1 class="display-5 fw-bold text-oro lh-1">TEAMNAME</h1>
+                <!-- SI TIENE EQUIPO: DE LA BD SACAR EL USERNAME PARA EL TITULO -->
+                <!-- SI -NO- TIENE EQUIPO: USAR "SIN EQUIPO" PARA EL TITULO -->
+            </div>
+            <!-- Navegación -->
+            <div class="p-4">
+                <nav class="nav nav-pills flex-column flex-sm-row justify-content-center fw-semibold">
+                    <a class="flex-sm-fill text-sm-center nav-link text-blanco" aria-current="page"
+                        href="config-perfil.html">Perfil</a>
+                    <a class="flex-sm-fill text-sm-center nav-link text-oro" href="config-equipo.html">Equipo</a>
+                </nav>
+            </div>
+            <!-- Si el usuario tiene equipo: -->
+            <!-- EDITAR DATOS -->
+            <div class="form needs-validation" style="display: none;">
+                <form class="row needs-validation">
+                    <!-- RRSS -->
+                    <form>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-twitter-x"></i></span>
+                                <input type="text" class="form-control" placeholder="Cuenta de X"
+                                    aria-describedby="basic-addon1" value="manolitos32_">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><img width="16" height="16"
+                                        src="https://img.icons8.com/ios-filled/50/valorant.png" alt="valorant" /></span>
+                                <input type="text" class="form-control" aria-describedby="basic-addon1"
+                                    value="Oborko#JEJE">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-link-45deg"></i></span>
+                                <input type="text" class="form-control" aria-describedby="basic-addon1"
+                                    value="Oborko#JEJE">
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Miembros -->
+                    <table class="table table-striped table-hover table-secondary position-relative">
+                        <thead>
+                            <!-- SOLO SI ES EL CAPI LE APARECE LA SECCIÓN "ACCIÓN" DE LA TABLA -->
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Twitter</th>
+                                <th scope="col">Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Oborko</td>
+                                <td>Capitán</td>
+                                <td>@oborkoelloko</td>
+                                <td><button class="btn btn-danger">Expulsar</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Daniela</td>
+                                <td>Jugador</td>
+                                <td>@danielita</td>
+                                <td><button class="btn btn-danger">Expulsar</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Huevo</td>
+                                <td>Jugador</td>
+                                <td>@oudur_</td>
+                                <td><button class="btn btn-danger">Expulsar</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Leinad</td>
+                                <td>Jugador</td>
+                                <td></td>
+                                <td><button class="btn btn-danger">Expulsar</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>DarkNeko</td>
+                                <td>Jugador</td>
+                                <td>@darkneko_</td>
+                                <td><button class="btn btn-danger">Expulsar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- BOTÓNES -->
+                    <div class="position-relative">
+                        <button type="submit" class="btn btn-oro">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Si el usuario NO tiene equipo: -->
+
+            <!-- CREAR EQUIPO -->
+            <div class="row position-relative">
+                <form class="col-md-6  needs-validation" novalidate>
+                    <div class="text-center border-bottom position-relative mb-3">
+                        <h1 class="display-5 fw-bold text-oro lh-1">CREAR</h1>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label text-oro">Nombre del equipo</label>
+                        <input type="text" class="form-control" id="inputName" name="nombre" required>
+                        <div class="invalid-feedback">
+                            Por favor, introduce tu nombre.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationPassword" class="form-label text-oro">Contraseña</label>
+                        <div class="input-group has-validation">
+                            <input type="password" class="form-control" id="validationPassword1"
+                                aria-describedby="inputGroupPrepend" name="password" required>
+                            <span class="input-group-text eye-toggle bi-eye-slash-fill"
+                                data-target="validationPassword1"></span>
+                            <div class="invalid-feedback">Por favor, introduce una contraseña.</div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationRepeatPassword" class="form-label text-oro">Repetir Contraseña</label>
+                        <div class="input-group has-validation">
+                            <input type="password" class="form-control" id="validationPassword2"
+                                aria-describedby="inputGroupPrepend" name="confirmPassword" required>
+                            <span class="input-group-text eye-toggle bi-eye-slash-fill"
+                                data-target="validationPassword2"></span>
+                            <div class="invalid-feedback">
+                                Por favor, repite la contraseña.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <button type="submit" class="btn btn-oro">Crear</button>
+                    </div>
+                </form>
+                <form class="col-md-6  needs-validation" novalidate>
+                    <div class="text-center border-bottom position-relative mb-3">
+                        <h1 class="display-5 fw-bold text-oro lh-1">UNIRSE</h1>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label text-oro">Nombre del equipo</label>
+                        <input type="text" class="form-control" id="inputName" name="nombre" required>
+                        <div class="invalid-feedback">
+                            Por favor, introduce tu nombre.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationPassword" class="form-label text-oro">Contraseña</label>
+                        <div class="input-group has-validation">
+                            <input type="password" class="form-control" id="validationPassword1"
+                                aria-describedby="inputGroupPrepend" name="password" required>
+                            <span class="input-group-text eye-toggle bi-eye-slash-fill"
+                                data-target="validationPassword1"></span>
+                            <div class="invalid-feedback">Por favor, introduce una contraseña.</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-oro">Unirse</button>
+                    </div>
+                </form>
+            </div>
+            <!-- UNIRSE EQUIPO -->
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-azul">
+        <div class="container">
+            <footer class="row row-cols-1 text-blanco row-cols-sm-2 py-5 row-cols-md-4">
+                <div class="col">
+                    <p class="fs-2 fw-semibold">Eclipse Tournaments</p>
+                    <p class="fs-6 text-gris">Tus toneos al alcance de la mano.</p>
+                </div>
+
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="conocenos.html#msg-ceo" class="nav-link p-0 text-gris">Sobre
+                                nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="patrocinadores.html#asociate"
+                                class="nav-link p-0 text-gris">Asóciate</a></li>
+                        <li class="nav-item mb-2"><a href="soporte.html#form-contacto"
+                                class="nav-link p-0 text-gris">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Información</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="politica-privacidad.html"
+                                class="nav-link p-0 text-gris">Política de
+                                privacidad</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="condiciones-uso.html"
+                                class="nav-link p-0 text-gris">Condiciones de
+                                uso</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="soporte.html#accordionPanelsStayOpenExample"
+                                class="nav-link p-0 text-gris">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="img-fluid" style="max-width: 10em;" src="img/Icon-Logo-Transparent-1.png">
+                </div>
+            </footer>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-gris">© 2023 Eclipse Tournaments, Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a href="https://www.twitch.tv" target="_blank"><i
+                                class="bi text-gris bi-twitch"></i></a></li>
+                    <li class="ms-3"><a href="https://twitter.com" target="_blank"><i
+                                class="bi text-gris bi-twitter-x"></i></a></li>
+                    <li class="ms-3"><a href="https://discord.com" target="_blank"><i
+                                class="bi text-gris bi-discord"></i></a></li>
+
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

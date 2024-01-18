@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/Icon-Logo-Transparent-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Eclipse Tournaments</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="bg-azul">
+        <header
+            class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="imglogoeclipse" src="img/Text-Logo-Transparent-1.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 text-blanco">Inicio</a></li>
+                <li><a href="conocenos.html" class="nav-link px-2 text-oro">Conócenos</a></li>
+                <button class="btn dropdown-toggle text-blanco nav-item dropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">Liga</button>
+                <ul class="dropdown-menu bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="division1-info.html">Primera División</a></li>
+                    <li><a class="dropdown-item text-blanco" href="division2-info.html">Segunda División</a></li>
+                </ul>
+                <li><a href="patrocinadores.html" class="nav-link px-2 text-blanco">Patrocinadores</a></li>
+                <li><a href="soporte.html" class="nav-link px-2 text-blanco">Soporte</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end" id="navbarLogin">
+                <a type="button" class="btn btn-oro-outline me-2" href="iniciar-sesion.html">Iniciar Sesión</a>
+                <a type="button" class="btn btn-oro" href="registro.html">Registrarse</a>
+            </div>
+
+            <div class="dropdown text-end" id="navbarLoggedIn" style="display: none;">
+                <a href="#" class="d-block text-decoration-none dropdown-toggle text-blanco" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img alt="ImgPerfil" width="32" height="32" class="rounded-circle" id="agentePerfil">
+                </a>
+                <ul class="dropdown-menu text-small bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="perfilUsuario.html">Perfil</a></li>
+                    <li><a class="dropdown-item text-blanco" href="perfilEquipo.html">Equipo</a></li>
+                    <li><a class="dropdown-item text-blanco" href="config-perfil.html">Configuración</a></li>
+                    <li>
+                        <hr class="dropdown-divider" style="border-color: white;">
+                    </li>
+                    <li><a class="dropdown-item text-blanco" onclick="cerrarSesion();">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbo-conocenos" style="display:flex; justify-content:center;align-items:center;">
+        <div class="p-5 text-center">
+            <div class="container py-5">
+                <h1 class="text-oro fw-bold fs-1">CONÓCENOS</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- MENSAJE CEO -->
+    <div class="container col-xxl-8 px-4 py-5" id="msg-ceo">
+        <div class="row flex-lg-row-reverse align-items-center g-5">
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-oro lh-1 border-bottom mb-4">¿QUÉ ES ECLIPSE TOURNAMENTS?</h1>
+                <p class="fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda hic vero qui,
+                    tempore, eos laborum sapiente fuga laboriosam perspiciatis perferendis mollitia labore dolorum odit
+                    dolore magnam, est inventore quibusdam ut?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Distinctio consequatur nobis dolorem maiores laboriosam aliquid</p>
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <img src="img/WebDev.jpg" alt="user-image" width="32" class="rounded-circle"
+                        style="width:50px; height:50px; padding:0; margin-left: 10px !important;;">
+                    <span class="d-lg-flex flex-column gap-1 d-none">
+                        <h5 class="my-0">Alvaro Pérez</h5>
+                        <h6 class="my-0 fw-normal">CEO</h6>
+                    </span>
+                </div>
+            </div>
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="img/que-es.jpg" class="d-block rounded mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                    width="700" height="500" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+    <!-- PERSONAL -->
+    <div class="bg-azul">
+        <div class="container staff-container">
+            <div class="card card0">
+                <div class="border text-oro">
+                    <h2 class="fw-bold">Gustavo Agullo</h2>
+                    <h3 class="">Web Developer</h3>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-twitter-x text-oro"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="border text-oro">
+                    <h2 class="fw-bold">Alvaro Pérez</h2>
+                    <h3>Chief Executive Oficer</h3>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-twitter-x text-oro"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="border text-oro">
+                    <h2 class="fw-bold">Irene Campillo</h2>
+                    <h3>Community Manager</h3>
+                    <div class="icons">
+                        <a href=""><i class="bi bi-twitter-x text-oro"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORMAR PARTE -->
+    <div class="container my-5 p-5 formar-parte rounded-4">
+        <h1 class="text-oro fw-bold position-relative">¡Quiero formar parte!</h1>
+        <p class="text-blanco fw-semibold position-relative">
+            Si quieres unirte al staff envíanos un mensaje con la información necesaria.
+        </p>
+        <a type="button" class="btn btn-oro-outline btn-lg px-4 position-relative" href="soporte.html">Más Información<i
+                class="bi bi-arrow-right-short"></i></a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-azul">
+        <div class="container">
+            <footer class="row row-cols-1 text-blanco row-cols-sm-2 py-5 row-cols-md-4">
+                <div class="col">
+                    <p class="fs-2 fw-semibold">Eclipse Tournaments</p>
+                    <p class="fs-6 text-gris">Tus toneos al alcance de la mano.</p>
+                </div>
+
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="conocenos.html#msg-ceo" class="nav-link p-0 text-gris">Sobre
+                                nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="patrocinadores.html#asociate"
+                                class="nav-link p-0 text-gris">Asóciate</a></li>
+                        <li class="nav-item mb-2"><a href="soporte.html#form-contacto"
+                                class="nav-link p-0 text-gris">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Información</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="politica-privacidad.html"
+                                class="nav-link p-0 text-gris">Política de
+                                privacidad</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="condiciones-uso.html"
+                                class="nav-link p-0 text-gris">Condiciones de
+                                uso</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="soporte.html#accordionPanelsStayOpenExample"
+                                class="nav-link p-0 text-gris">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="img-fluid" style="max-width: 10em;" src="img/Icon-Logo-Transparent-1.png">
+                </div>
+            </footer>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-gris">© 2023 Eclipse Tournaments, Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a href="https://www.twitch.tv" target="_blank"><i
+                                class="bi text-gris bi-twitch"></i></a></li>
+                    <li class="ms-3"><a href="https://twitter.com" target="_blank"><i
+                                class="bi text-gris bi-twitter-x"></i></a></li>
+                    <li class="ms-3"><a href="https://discord.com" target="_blank"><i
+                                class="bi text-gris bi-discord"></i></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

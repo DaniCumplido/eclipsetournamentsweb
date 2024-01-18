@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/Icon-Logo-Transparent-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Eclipse Tournaments</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="bg-azul">
+        <header
+            class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="imglogoeclipse" src="img/Text-Logo-Transparent-1.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 text-blanco">Inicio</a></li>
+                <li><a href="conocenos.html" class="nav-link px-2 text-blanco">Conócenos</a></li>
+                <button class="btn dropdown-toggle text-blanco nav-item dropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">Liga</button>
+                <ul class="dropdown-menu bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="division1-info.html">Primera División</a></li>
+                    <li><a class="dropdown-item text-blanco" href="division2-info.html">Segunda División</a></li>
+                </ul>
+                <li><a href="patrocinadores.html" class="nav-link px-2 text-oro">Patrocinadores</a></li>
+                <li><a href="soporte.html" class="nav-link px-2 text-blanco">Soporte</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end" id="navbarLogin">
+                <a type="button" class="btn btn-oro-outline me-2" href="iniciar-sesion.html">Iniciar Sesión</a>
+                <a type="button" class="btn btn-oro" href="registro.html">Registrarse</a>
+            </div>
+
+            <div class="dropdown text-end" id="navbarLoggedIn" style="display: none;">
+                <a href="#" class="d-block text-decoration-none dropdown-toggle text-blanco" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img alt="ImgPerfil" width="32" height="32" class="rounded-circle" id="agentePerfil">
+                </a>
+                <ul class="dropdown-menu text-small bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="perfilUsuario.html">Perfil</a></li>
+                    <li><a class="dropdown-item text-blanco" href="perfilEquipo.html">Equipo</a></li>
+                    <li><a class="dropdown-item text-blanco" href="config-perfil.html">Configuración</a></li>
+                    <li>
+                        <hr class="dropdown-divider" style="border-color: white;">
+                    </li>
+                    <li><a class="dropdown-item text-blanco" onclick="cerrarSesion();">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- JUMBOTRON -->
+    <div class="jumbotron jumbo-patros" style="display:flex; justify-content:center;align-items:center;">
+        <div class="p-5 text-center">
+            <div class="container py-5">
+                <h1 class="text-oro fw-bold fs-1">PATROCINADORES</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SPONSORS (X2) -->
+    <div class="container col-xxl-8 px-4 my-5">
+        <!-- TITULO -->
+        <div class="text-left border-bottom">
+            <h1 class="display-5 fw-bold text-oro lh-1">SPONSORS</h1>
+            <p class="text-blaco fw-bold text-azul">NUESTROS SOCIOS, LOS ARTÍFICES DE TODO ESTE ÉXITO</p>
+        </div>
+        <!-- CONTENIDO -->
+        <!-- REDBULL -->
+        <!-- SLIDER -->
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5 border-bottom">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide col-10 col-sm-8 col-lg-6"
+                data-bs-touch="false">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/rb1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/rb2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/rb3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- FIN-SLIDER -->
+
+            <!-- TXT -->
+            <div class="col-lg-6">
+                <img class="img-fluid" width="450px" src="img/Logo RedBull.png" alt="Logo Logitech">
+                <p class="lead">Red Bull es una reconocida marca de bebidas energéticas que impulsa la vitalidad y
+                    el
+                    rendimiento, brindando a sus consumidores la energía para enfrentar desafíos y superar límites.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="button" class="btn btn-oro btn-lg px-4 me-md-2" href="https://www.redbull.com/es-es/" target="_blank">Mas información</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div id="carouselExampleControlsNoTouching" class="carousel slide col-10 col-sm-8 col-lg-6"
+                data-bs-touch="false">
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/lg1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/lg2.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/lg3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-fluid" width="450px" src="img/Logo Logitech.png" alt="Logo Logitech">
+                <p class="lead">Red Bull es una reconocida marca de bebidas energéticas que impulsa la vitalidad y
+                    el
+                    rendimiento, brindando a sus consumidores la energía para enfrentar desafíos y superar límites.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a type="button" class="btn btn-oro btn-lg px-4 me-md-2" href="https://www.logitech.com/es-es" target="_blank">Mas información</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECUNDARIOS (X3) -->
+    <div class="bg-azul">
+        <div class="container py-5">
+            <!-- TITULO -->
+            <div class="text-left border-bottom mb-4">
+                <h1 class="display-5 fw-bold text-oro lh-1">PARTNERS</h1>
+                <p class="text-blaco fw-bold text-blanco">LOS COLABORADORES QUE HACEN POSIBLE TODO ESTO</p>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/partner1.png" class="card-img-top" alt="...">
+                        <div class="card-body text-azul">
+                            <h5 class="card-title fw-bold">Nilo Wear</h5>
+                            <p class="card-text">NiloWear, la empresa de merchandising especializada en
+                                eSports que transforma tu estilo en una declaración. Destacan por ofrecer diseños
+                                personalizados para cada proyecto, donde la individualidad y la creatividad se fusionan.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="mb-0"><a
+                                    class="link-offset-2 link-underline link-underline-opacity-75 text-primary fw-normal"
+                                    href="https://twitter.com/NiloWear" target="_blank">Visitar sitio<i
+                                        class="bi bi-chevron-right fw-normal"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/partner2.png" class="card-img-top " alt="...">
+                        <div class="card-body text-azul">
+                            <h5 class="card-title fw-bold">Arena Gaming</h5>
+                            <p class="card-text">La franquicia líder de centros gaming de alto rendimiento. Aquí,
+                                llevan la experiencia gaming a nuevos niveles al ofrecer no solo torneos y eventos en
+                                vivo emocionantes, sino también al proporcionan instalaciones de última generación para
+                                que los jugadores alcancen su máximo rendimiento.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="mb-0"><a
+                                    class="link-offset-2 link-underline link-underline-opacity-75 text-primary fw-normal"
+                                    href="https://www.arenagaming.es/" target="_blank">Visitar sitio<i
+                                        class="bi bi-chevron-right fw-normal"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/partner3.png" class="card-img-top" alt="...">
+                        <div class="card-body text-azul">
+                            <h5 class="card-title fw-bold">Mars Gaming</h5>
+                            <p class="card-text">MarsGaming, la marca especializada en la creación y venta de
+                                periféricos gaming de la más alta calidad. En MarsGaming, diseñan productos con las
+                                mejores prestaciones, pensados para satisfacer las exigencias de los jugadores más
+                                apasionados.</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="mb-0"><a
+                                    class="link-offset-2 link-underline link-underline-opacity-75 text-primary fw-normal"
+                                    href="https://es.marsgaming.eu/es/" target="_blank">Visitar sitio<i
+                                        class="bi bi-chevron-right fw-normal"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- COLABORAR -->
+    <div class="container my-5 p-5 formar-parte rounded-4" id="asociate">
+        <h1 class="text-oro fw-bold position-relative">Colabora con nosotros</h1>
+        <p class="text-blanco fw-semibold position-relative">
+            Si quieres informarte sobre las opciones de colaboración con nuestros proyectos, contáctanos
+            solicitando los datos que más te interesen.
+        </p>
+        <a type="button" class="btn btn-oro-outline btn-lg px-4 position-relative" href="soporte.html">Contactar <i
+                class="bi bi-arrow-right-short"></i></a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-azul">
+        <div class="container">
+            <footer class="row row-cols-1 text-blanco row-cols-sm-2 py-5 row-cols-md-4">
+                <div class="col">
+                    <p class="fs-2 fw-semibold">Eclipse Tournaments</p>
+                    <p class="fs-6 text-gris">Tus toneos al alcance de la mano.</p>
+                </div>
+
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="conocenos.html#msg-ceo" class="nav-link p-0 text-gris">Sobre
+                                nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="patrocinadores.html#asociate"
+                                class="nav-link p-0 text-gris">Asóciate</a></li>
+                        <li class="nav-item mb-2"><a href="soporte.html#form-contacto"
+                                class="nav-link p-0 text-gris">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Información</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="politica-privacidad.html"
+                                class="nav-link p-0 text-gris">Política de
+                                privacidad</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="condiciones-uso.html" class="nav-link p-0 text-gris">Condiciones de
+                                uso</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="soporte.html#accordionPanelsStayOpenExample"
+                                class="nav-link p-0 text-gris">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="img-fluid" style="max-width: 10em;" src="img/Icon-Logo-Transparent-1.png">
+                </div>
+            </footer>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-gris">© 2023 Eclipse Tournaments, Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a href="https://www.twitch.tv" target="_blank"><i
+                                class="bi text-gris bi-twitch"></i></a></li>
+                    <li class="ms-3"><a href="https://twitter.com" target="_blank"><i
+                                class="bi text-gris bi-twitter-x"></i></a></li>
+                    <li class="ms-3"><a href="https://discord.com" target="_blank"><i
+                                class="bi text-gris bi-discord"></i></a></li>
+
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

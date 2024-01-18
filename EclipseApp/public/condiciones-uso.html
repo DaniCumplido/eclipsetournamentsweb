@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/Icon-Logo-Transparent-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Eclipse Tournaments</title>
+</head>
+
+<body class="bg-azul">
+    <!-- NAVBAR -->
+    <div class="bg-azul">
+        <header
+            class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="imglogoeclipse" src="img/Text-Logo-Transparent-1.png" alt="">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="index.html" class="nav-link px-2 text-blanco">Inicio</a></li>
+                <li><a href="conocenos.html" class="nav-link px-2 text-blanco">Conócenos</a></li>
+                <button class="btn dropdown-toggle text-blanco nav-item dropdown" data-bs-toggle="dropdown"
+                    aria-expanded="false">Liga</button>
+                <ul class="dropdown-menu bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="division1-info.html">Primera División</a></li>
+                    <li><a class="dropdown-item text-blanco" href="division2-info.html">Segunda División</a></li>
+                </ul>
+                <li><a href="patrocinadores.html" class="nav-link px-2 text-blanco">Patrocinadores</a></li>
+                <li><a href="soporte.html" class="nav-link px-2 text-blanco">Soporte</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end" id="navbarLogin">
+                <a type="button" class="btn btn-oro-outline me-2" href="iniciar-sesion.html">Iniciar Sesión</a>
+                <a type="button" class="btn btn-oro" href="registro.html">Registrarse</a>
+            </div>
+
+            <div class="dropdown text-end" id="navbarLoggedIn" style="display: none;">
+                <a href="#" class="d-block text-decoration-none dropdown-toggle text-blanco" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img alt="ImgPerfil" width="32" height="32" class="rounded-circle" id="agentePerfil">
+                </a>
+                <ul class="dropdown-menu text-small bg-azul">
+                    <li><a class="dropdown-item text-blanco" href="perfilUsuario.html">Perfil</a></li>
+                    <li><a class="dropdown-item text-blanco" href="perfilEquipo.html">Equipo</a></li>
+                    <li><a class="dropdown-item text-blanco" href="config-perfil.html">Configuración</a></li>
+                    <li>
+                        <hr class="dropdown-divider" style="border-color: white;">
+                    </li>
+                    <li><a class="dropdown-item text-blanco" onclick="cerrarSesion();">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="jumbotron-politica p-5">
+        <div class="container bg-azul rounded-3 p-5 my-5">
+            <div class="text-center border-bottom mb-4 position-relative">
+                <h1 class="display-5 fw-bold text-oro lh-1">Condiciones de Uso</h1>
+            </div>
+            <div class="contenido">
+                <p class="text-gris position-relative">
+                    Fecha de última actualización: 24/11/2023<br><br>
+
+                    Al acceder y utilizar nuestro sitio web, aceptas cumplir con las siguientes condiciones de uso:
+                    <br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Uso Apropiado:</span><br>
+                    Utilizarás nuestro sitio web de manera legal y ética, sin participar en actividades que puedan
+                    dañar, deshabilitar o perjudicar el funcionamiento del sitio.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Contenido del Usuario:</span><br>
+                    Si proporcionas contenido al sitio, garantizas que tienes los derechos necesarios sobre ese
+                    contenido y aceptas que podemos utilizarlo de acuerdo con nuestras políticas.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Divulgación de Información:</span><br>
+                    No compartiremos tu información personal con terceros, excepto en los casos previstos por la ley o
+                    con tu consentimiento expreso.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Privacidad:</span><br>
+                    Te comprometes a respetar nuestra política de privacidad y comprender cómo recopilamos, utilizamos y
+                    compartimos tu información.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Enlaces a Terceros:</span><br>
+                    Nuestro sitio puede contener enlaces a sitios web de terceros. No somos responsables de los
+                    contenidos o prácticas de privacidad de estos sitios y te recomendamos revisar sus
+                    políticas.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Propiedad Intelectual:</span><br>
+                    El contenido y los derechos de propiedad intelectual en nuestro sitio web son propiedad nuestra o de
+                    nuestros licenciatarios. No podrás utilizarlos sin nuestro permiso expreso. <br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Cambios en las Condiciones de Uso:</span><br>
+                    Nos reservamos el derecho de actualizar estas condiciones de uso en cualquier momento. Te
+                    recomendamos revisar regularmente esta página para estar al tanto de cualquier cambio.<br><br>
+
+                    <span class="fw-medium fs-4 text-blanco">Terminación del Acceso:</span><br>
+                    Podemos suspender o dar por terminado tu acceso al sitio en cualquier momento si violas estas
+                    condiciones de uso o si consideramos que tu conducta puede ser perjudicial para nosotros o para
+                    otros usuarios.<br><br>
+
+                    Al utilizar nuestro sitio, aceptas cumplir con estas condiciones de uso. Si no estás de acuerdo con
+                    estas condiciones, te recomendamos que no utilices nuestro sitio.<br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="bg-azul">
+        <div class="container">
+            <footer class="row row-cols-1 text-blanco row-cols-sm-2 py-5 row-cols-md-4">
+                <div class="col">
+                    <p class="fs-2 fw-semibold">Eclipse Tournaments</p>
+                    <p class="fs-6 text-gris">Tus toneos al alcance de la mano.</p>
+                </div>
+
+                <div class="col">
+                    <h5>Compañía</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="conocenos.html#msg-ceo" class="nav-link p-0 text-gris">Sobre
+                                nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="patrocinadores.html#asociate"
+                                class="nav-link p-0 text-gris">Asóciate</a></li>
+                        <li class="nav-item mb-2"><a href="soporte.html#form-contacto"
+                                class="nav-link p-0 text-gris">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h5>Información</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="politica-privacidad.html"
+                                class="nav-link p-0 text-gris">Política de
+                                privacidad</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="condiciones-uso.html" class="nav-link p-0 text-gris">Condiciones de
+                                uso</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="soporte.html#accordionPanelsStayOpenExample"
+                                class="nav-link p-0 text-gris">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <img class="img-fluid" style="max-width: 10em;" src="img/Icon-Logo-Transparent-1.png">
+                </div>
+            </footer>
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-gris">© 2023 Eclipse Tournaments, Inc</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a href="https://www.twitch.tv" target="_blank"><i
+                                class="bi text-gris bi-twitch"></i></a></li>
+                    <li class="ms-3"><a href="https://twitter.com" target="_blank"><i
+                                class="bi text-gris bi-twitter-x"></i></a></li>
+                    <li class="ms-3"><a href="https://discord.com" target="_blank"><i
+                                class="bi text-gris bi-discord"></i></a></li>
+
+                </ul>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="scripts.js"></script>
+    <script src="Arranque.js"></script>
+</body>
+
+</html>
