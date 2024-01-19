@@ -1,0 +1,32 @@
+FRONTEND>
+-Configuración de usuario
+	-> Modificar el HTML para mandar un POST con los datos y un fetch con los existentes
+-Registrar equipo
+	-> Modificar el HTML para mandar un POST con los datos y  un fetch con los existentes
+-Unirse a equipo
+	-> Modificar perfil de capitan para poder ver/generar una "Key" de invite
+-Perfil de equipo
+	-> Modificar el HTML para mandar un POST con "Redes sociales, RitoID, rango, agente, username"
+-Inscripciones
+	-> Modificar "/division1-info" y "/division2-info" para poder inscribirse
+-Clasificacion
+	-> Modificar el HTML para mandar un FETCH y mostrar los resultados
+-Partidos
+	-> Modificar el HTML para mandar un FETCH y pedir: Rondas, subir resultado, Dia/hora + Equipos(1 y 2) + resultado(Limite de 24h para subir resultado a partir de la fecha, solo puede modificar el capitan)
+	-> Pop up en partidos para hacer el registro
+-Carrusel
+	-> Arreglar el carrusel en "/division1-info" y "/division2-info"
+-Contacto
+	-> Innecesario por el momento
+
+BACKEND>
+-Registrar equipo
+	-> Crear tablas adicionales en la BBDD (Nombre, Contraseña de equipo, id usuario/capitan)
+-Unirse a equipo
+	-> Generar "Key" aleatoria con 24h de caducidad automaticamente, o bien que genere una cuando pulse el usuario con caducidad de 24h
+-Perfil de equipo
+	-> Crear en "Arranque.js" el post correspondienta para los datos de equipo
+-Inscripciones
+	-> Crear tabla, o gestionar tabla equipo + competicion
+-Clasificacion
+	-> Equipos participantes, partidos jugados, victorias, derrotas
