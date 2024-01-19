@@ -634,21 +634,22 @@ p.text {
 
 @-webkit-keyframes carrousel {
     from {
-        -webkit-transform: rotateY(360deg) translateZ(100px) rotateY(-360deg);
-        -moz-transform: rotateY(360deg) translateZ(100px) rotateY(-360deg);
+        -webkit-transform: rotateY(360deg) translateZ(120px) rotateY(-360deg);
+        -moz-transform: rotateY(360deg) translateZ(120px) rotateY(-360deg);
         z-index: 10;
-        opacity: 0.9
+        opacity: 1
     }
 
     50% {
         z-index: -10;
+        opacity: 0;
     }
 
     to {
-        -webkit-transform: rotateY(0deg) translateZ(100px) rotateY(0deg);
-        -moz-transform: rotateY(0deg) translateZ(100px) rotateY(0deg);
+        -webkit-transform: rotateY(0deg) translateZ(120px) rotateY(0deg);
+        -moz-transform: rotateY(0deg) translateZ(120px) rotateY(0deg);
         z-index: 10;
-        opacity: 0.9
+        opacity: 1
     }
 }
 
@@ -656,17 +657,18 @@ p.text {
     from {
         -moz-transform: rotateY(360deg) translateZ(100px) rotateY(-360deg);
         z-index: 10;
-        opacity: 0.9
+        opacity: 1
     }
 
     50% {
         z-index: -10;
+        opacity: 1;
     }
 
     to {
         -moz-transform: rotateY(0deg) translateZ(100px) rotateY(0deg);
         z-index: 10;
-        opacity: 0.9
+        opacity: 1
     }
 }
 
@@ -681,7 +683,7 @@ p.text {
     left: 125px;
     border: solid var(--gris) 2px;
     border-radius: 8px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
     text-align: center;
     -webkit-animation-name: carrousel;
     -moz-animation-name: carrousel;
