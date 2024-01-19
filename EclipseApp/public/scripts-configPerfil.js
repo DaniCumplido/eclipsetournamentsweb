@@ -99,36 +99,35 @@ function actualizarIconoAgente() {
 }
 
 function guardarConfiguracion() {
-    // Obtener el agente seleccionado
     const agenteSeleccionado = document.getElementById('agentSelector').value;
-    // Obtener el rango seleccionado
     const rangoSeleccionado = document.getElementById('rankSelector').value;
-    // Obtener el rango seleccionado
     const cuentaX = document.getElementById('cuentaX').value;
-    // Obtener el rango seleccionado
     const cuentaRiot = document.getElementById('cuentaRiot').value;
-    // Obtener el rango seleccionado
     const cuentaTwitch = document.getElementById('cuentaTwitch').value;
-    // Obtener el rango seleccionado
     const cuentaDiscord = document.getElementById('cuentaDiscord').value;
 
-    // Guardar la configuración, por ejemplo, en localStorage
-    localStorage.setItem('agenteSeleccionado', agenteSeleccionado);
-    localStorage.setItem('rangoSeleccionado', rangoSeleccionado);
-    localStorage.setItem('cuentaX', cuentaX);
-    localStorage.setItem('cuentaRiot', cuentaRiot);
-    localStorage.setItem('cuentaTwitch', cuentaTwitch);
-    localStorage.setItem('cuentaDiscord', cuentaDiscord);
+    // Crear un objeto con los datos a enviar al servidor
+    const data = {
+        agenteSeleccionado,
+        rangoSeleccionado,
+        cuentaX,
+        cuentaRiot,
+        cuentaTwitch,
+        cuentaDiscord
+    };
 
-    // Actualizar la imagen del agente en el perfil
-    const agentePerfil = document.getElementById('agentePerfil');
-    const agenteUrl = `https://valorant-api.com/v1/agents/${agenteSeleccionado}`;
-
-    fetch(agenteUrl)
-        .then(response => response.json())
-        .then(data => {
-            const imagenUrl = data.data.displayIcon;
-            agentePerfil.src = imagenUrl;
-        })
-        .catch(error => console.error('Error al obtener información del agente:', error));
+    // Enviar los datos al servidor usando fetch y el método POST
+    fetch('/guardarConfiguracion', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('Configuración guardada exitosamente:', result);
+        // Puedes realizar otras acciones después de guardar los datos en el servidor si es necesario
+    })
+    .catch(error => console.error('Error al guardar la configuración:', error));
 }
